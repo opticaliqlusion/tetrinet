@@ -50,7 +50,7 @@ end_of_section = 0x00452DD4
 ebfe_addr = 0x0044baff
 cc_addr   = 0x004010A8
 
-# address of pointer to shellcode
+# address of pointer to shellcode - a static ptr to nicks in the image
 #   while not referenced directly in this script,
 #   it is assembled into the trampoline shellcode below
 shellcode_ptr_addr = 0x004537bc
