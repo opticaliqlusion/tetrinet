@@ -219,4 +219,3 @@ if __name__ == "__main__":
         decode(msg)
     #print '00479F25A23F81C50F4386CBDE61FA5BF52565A2E629'
     #print decode('00479F25A23F81C50F4386CBDE61FA5BF52565A2E629')
-
